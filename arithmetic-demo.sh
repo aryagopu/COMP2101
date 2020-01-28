@@ -1,4 +1,4 @@
-#!/bin/bash
+##!/bin/bash
 #
 # this script demonstrates doing arithmetic
 
@@ -6,9 +6,9 @@
 # Task 2: Change the output to only show:
 #    the sum of the 3 numbers with a label
 #    the product of the 3 numbers with a label
-read -p "Input1? " firstnum
-read -p "Input2? " secondnum
-read -p "Input3? " thirdnum
+read -p "Please enter the first number : " firstnum
+read -p "Please enter the second number : " secondnum
+read -p "Please enter the thrid number : " thirdnum
 
 #secondnum=2
 sum=$((firstnum + secondnum + thirdnum))
