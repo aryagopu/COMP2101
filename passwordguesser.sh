@@ -11,14 +11,16 @@
 
 myString="TestString"
 referenceString="password"
-for try in {1..5}
-do
-	read -p "Try ($try): Enter a password guess:" myString
-	if [ $myString = $referenceString ]
-	then
-		printf "Congratulations your guess is right!\n"
-		break
-	else
-		echo "The password you entered  is wrong..."
-	fi
-done
+read -s -p "Guess the password:" $myString
+echo
+if [ $myString = $referenceString ]; then
+  echo "You guessed the password!"
+else
+  read -s -p "Guess the password:" $myString
+  echo "The password eludes you..."
+  if [ $myString = $referenceString ]; then
+    echo "You guessed the password!"
+    else
+    read -s -p "Guess the password:" $myString
+  fi
+fi
